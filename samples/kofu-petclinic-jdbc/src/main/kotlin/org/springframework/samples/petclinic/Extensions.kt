@@ -3,6 +3,7 @@ package org.springframework.samples.petclinic
 import org.springframework.web.servlet.function.ServerRequest
 import org.springframework.web.servlet.function.paramOrNull
 import java.time.LocalDate
+import java.util.*
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.full.createInstance
 import kotlin.reflect.full.memberProperties
@@ -34,3 +35,6 @@ inline fun <reified T : Any> ServerRequest.form(prefix: List<String> = listOf())
 fun String?.asNotEmpty(): String? = this?.let {
     if (it.isEmpty()) null else it
 }
+
+fun ServerRequest.locale(): Locale =
+        this.headers().asHttpHeaders().contentLanguage ?: Locale.ENGLISH

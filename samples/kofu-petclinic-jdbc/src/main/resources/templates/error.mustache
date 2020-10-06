@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+    {{> fragments/header}}
+    <body>
+        {{> fragments/nav }}
+        <div class="container-fluid">
+            <div class="container xd-container">
+                <img src="resources/images/pets.png" />
+                <h2>Something happened...</h2>
+                <p>{{#exception}}{{message}}{{/exception}}</p>
+                {{> fragments/footer }}
+            </div>
+        </div>
+    </body>
+</html>
