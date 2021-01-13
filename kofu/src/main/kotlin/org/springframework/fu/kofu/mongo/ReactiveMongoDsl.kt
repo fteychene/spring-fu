@@ -34,7 +34,7 @@ import org.springframework.fu.kofu.ConfigurationDsl
  */
 open class ReactiveMongoDsl(
 	private val init: ReactiveMongoDsl.() -> Unit
-) : AbstractMongoDsl({}) {
+) : AbstractMongoDsl() {
 
 	override fun initialize(context: GenericApplicationContext) {
 		super.initialize(context)

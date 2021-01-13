@@ -28,7 +28,7 @@ import org.springframework.fu.kofu.ConfigurationDsl
  *
  * @author Eddú Meléndez
  */
-open class MongoDsl(private val init: MongoDsl.() -> Unit) : AbstractMongoDsl({}) {
+open class MongoDsl(private val init: MongoDsl.() -> Unit) : AbstractMongoDsl() {
 
     override fun initialize(context: GenericApplicationContext) {
         super.initialize(context)
