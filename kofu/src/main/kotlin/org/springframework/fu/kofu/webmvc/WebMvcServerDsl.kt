@@ -82,7 +82,8 @@ open class WebMvcServerDsl(private val init: WebMvcServerDsl.() -> Unit): Abstra
 	 * Configure routes via a [dedicated DSL][RouterFunctionDsl].
 	 * @sample org.springframework.fu.kofu.samples.webMvcRouter
 	 */
-	fun router(routes: (RouterFunctionDsl.() -> Unit)) {
+	// OPEN IS FOR TESTS
+	open fun router(routes: (RouterFunctionDsl.() -> Unit)) {
 		context.registerBean(BeanDefinitionReaderUtils.uniqueBeanName(RouterFunctionDsl::class.java.name, context)) { org.springframework.web.servlet.function.router(routes) }
 	}
 

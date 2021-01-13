@@ -32,7 +32,7 @@ import org.springframework.fu.kofu.ConfigurationDsl
  *
  * @author Eddú Meléndez
  */
-abstract class AbstractMongoDsl(private val init: MongoDsl.() -> Unit) : AbstractDsl() {
+abstract class AbstractMongoDsl : AbstractDsl() {
 
     protected val properties = MongoProperties()
 
